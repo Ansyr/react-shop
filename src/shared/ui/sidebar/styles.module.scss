@@ -1,0 +1,21 @@
+.sidebar{
+  height: 100%;
+  width: 104px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background: var(--base-dark-bg-2);
+  border-bottom-right-radius: 16px;
+  border-top-right-radius: 16px;
+
+  padding: 24px 0;
+  text-align: center;
+
+}
+
+.sidebarItem{
+  text-align: center;
+  margin-top: 5px;
+}

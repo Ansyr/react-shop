@@ -1,0 +1,60 @@
+.btn{
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 600;
+  &:hover{
+    box-shadow: 0 8px 24px 0 rgba(146, 136, 224, 0.30);
+  }
+}
+
+.fill{
+  color: var(--base);
+  background: var(--primary-color);
+  text-align: center;
+  align-items: center;
+}
+
+.line{
+  color: var(--base);
+  background: transparent;
+  border: 1px solid var(--primary-color);
+}
+
+.clear{
+  background: transparent;
+}
+
+.large{
+  padding: 14px 60px;
+}
+
+.fullWidth{
+  width: 100%;
+}
+
+.icon{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.medium{
+  padding: 14px 34px;
+}
+.small{
+  padding: 14px;
+}
+
+.startIcon{
+  margin-right: 8px;
+}
+
+.endIcon{
+   margin-left: 8px;
+ }
+
+.square{
+  display: inline-flex;
+  padding: 14px;
+}
