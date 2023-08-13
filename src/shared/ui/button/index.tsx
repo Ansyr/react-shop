@@ -1,6 +1,6 @@
+import {clsx} from "clsx";
 import React, {ButtonHTMLAttributes} from "react";
 import styles from "./styles.module.scss"
-import {clsx} from "clsx";
 
 type ButtonTheme = 'fill' | "line" | "clear"
 type ButtonSize = 'small' | 'medium' | 'large' | "square"

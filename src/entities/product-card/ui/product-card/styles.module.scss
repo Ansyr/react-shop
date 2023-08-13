@@ -1,0 +1,31 @@
+.productCard{
+  display: flex;
+  justify-content: center;
+
+  max-width: 192px;
+  text-align: center;
+  border-radius: 8px;
+
+  position: relative;
+  padding-bottom: 14px;
+  .image{
+    margin-top: -24px;
+  }
+  .content{
+    max-width: 144px;
+    text-align: center;
+  }
+
+  .title{
+    margin-top: 14px;
+    font-weight: 500;
+  }
+
+  .price{
+    margin-top: 8px;
+  }
+
+}
+
+
+

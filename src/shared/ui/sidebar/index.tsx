@@ -1,5 +1,8 @@
-import styles from "./styles.module.scss"
 import React from "react";
+import {Link} from "react-router-dom";
+import styles from "./styles.module.scss"
+
+
 
 interface SidebarItems{
     value: string,
@@ -9,20 +12,23 @@ interface SidebarItems{
 
 interface SidebarProps{
     items: SidebarItems[]
-    header: React.ReactNode
+    logo: React.ReactNode
 }
 
-const Sidebar = ({items,header} : SidebarProps) => {
+
+
+export const Sidebar = ({items,logo} : SidebarProps) => {
     return (
         <div className={styles.sidebar}>
-            {header}
+            {logo}
             <ul>
                 {items.map((item,id) => <li className={styles.sidebarItem} key={id}>
-                    {item.icon}
+                    <Link className={styles.link} to={item.href}>
+                        {item.icon}
+                    </Link>
                 </li>)}
             </ul>
         </div>
     );
 };
 
-export default Sidebar;

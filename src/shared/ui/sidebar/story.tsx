@@ -1,14 +1,13 @@
 import type {ComponentMeta, ComponentStory} from '@storybook/react';
-import Sidebar from "./index.tsx";
-import Plus from "../../ui-svg/plus";
-import Home from "../../ui-svg/home";
-import Button from "../Button";
-import Store from "../../ui-svg/store";
-import Discount from "../../ui-svg/discount";
+import Button from "../button";
+import {Home, Store} from "../ui-svg/";
+import {Discount} from "../ui-svg/";
+
+import {Sidebar} from "./index.tsx";
 
 
 export default {
-    title: 'ui-kit/Sidebar',
+    title: 'shared/Sidebar',
     component: Sidebar,
     parameters:{
         backgrounds:{
@@ -50,7 +49,7 @@ SideBar.args = {
             icon: <Button theme={"clear"} size={"square"}>{<Discount/>}</Button>,
         }
     ],
-    header: <Store/>
+    logo: <Store/>
 };
 
 

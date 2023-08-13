@@ -1,10 +1,10 @@
 import type {ComponentMeta, ComponentStory} from '@storybook/react';
+import {Plus} from "../ui-svg/plus";
 import Button from "./index.tsx";
-import Plus from "../../ui-svg/plus";
 
 
 export default {
-    title: 'ui-kit/Button',
+    title: 'shared/button',
     component: Button,
     parameters:{
         backgrounds:{

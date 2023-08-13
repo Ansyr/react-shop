@@ -1,9 +1,19 @@
-:root{
+:root {
   --primary-color: #EA7C69;
   --base: #FAFAFA;
 
   --base-dark-bg-1: #252836;
   --base-dark-bg-2: #1F1D2B;
+  --base-dark-line: #393C49;
 
-  --font-small: 14px
+  --white: #fff;
+
+  --text-gray: #889898;
+  --text-lighter: #E0E6E9;
+
+  // 12 14 16 28
+  --font-small: 12px;
+  --font-medium: 14px;
+  --font-large: 16px;
+  --font-xl: 28px;
 }

@@ -1,0 +1,47 @@
+.inputWrap{
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.inputWrap:has(.icon){
+  .input{
+    padding-left: 42px;
+  }
+}
+
+.icon{
+  position: absolute;
+  margin: 8px;
+  width: 1.5rem;
+  height: 1.5rem;
+
+}
+
+
+.input{
+  padding: 14px;
+
+  border: 1px solid var(--base-dark-line, #393C49);
+  background: var(--base-form-bg, #2D303E);
+  color: var(--text-lighter);
+  border-radius: 8px;
+
+
+
+  &::placeholder{
+    color: var(--text-gray);
+  }
+}
+
+
+.medium{
+  width: 297px;
+}
+
+.square{
+  width: 48px;
+  text-align: center;
+  font-size: 16px;
+}
+

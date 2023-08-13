@@ -1,5 +1,5 @@
 
-const Store = () => {
+export const Store = () => {
     return (
         <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect opacity="0.26" width="56" height="56" rx="12" fill="#EB966A"/>
@@ -15,5 +15,3 @@ const Store = () => {
 
     );
 };
-
-export default Store;
