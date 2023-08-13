@@ -12,12 +12,16 @@
   background: var(--primary-color);
   text-align: center;
   align-items: center;
+
 }
 
 .line{
   color: var(--base);
   background: transparent;
   border: 1px solid var(--primary-color);
+  &:hover{
+    background: var(--primary-color);
+  }
 }
 
 .clear{
@@ -43,8 +47,9 @@
   padding: 14px 34px;
 }
 .small{
-  padding: 14px;
+  padding: 3px 16px;
 }
+
 
 .startIcon{
   margin-right: 8px;

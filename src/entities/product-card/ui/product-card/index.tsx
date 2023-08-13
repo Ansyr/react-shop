@@ -1,4 +1,6 @@
+import {clsx} from "clsx";
 import {Card, Typography} from "@/shared/ui"
+import Button from "@/shared/ui/button";
 import styles from "./styles.module.scss"
 
 interface ProductCardProps{
@@ -10,25 +12,24 @@ interface ProductCardProps{
 }
 
 export const ProductCard = (props: ProductCardProps) => {
-    const {img,title,price,availableCount,classNames,...rest} = props
+    const {img,title,price,classNames,...rest} = props
+    const className = clsx(styles.productCard,classNames)
     return (
-        <Card classNames={styles.productCard} {...rest}>
+        <Card classNames={className} {...rest}>
             <div className={styles.content}>
                 <img src={img} alt="" className={styles.image}/>
-                <div className={styles.productInfo}>
                     <Typography as={"h6"} color={"primary"} classNames={styles.title}>
-                        Spicy seasoned seafood noodles
+                        {title}
                     </Typography >
-                    <Typography as={"h6"} color={"primary"} classNames={styles.price}>
-                        {`$ ${price}`}
-                    </Typography>
-                    <Typography as={"h6"} color={"secondary"} classNames={styles.price}>
-                        {availableCount} Bowls available
-                    </Typography>
-                </div>
+                    <div className={styles.cardInfo}>
+                        <Typography as={"h6"} color={"primary"} classNames={styles.price}>
+                            {`${price}`}
+                        </Typography>
+                        <Button size={"small"} color={"secondary"} theme={"line"}>Add</Button>
+                    </div>
+
 
             </div>
-
         </Card>
     );
 };

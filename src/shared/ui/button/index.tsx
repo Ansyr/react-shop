@@ -3,7 +3,7 @@ import React, {ButtonHTMLAttributes} from "react";
 import styles from "./styles.module.scss"
 
 type ButtonTheme = 'fill' | "line" | "clear"
-type ButtonSize = 'small' | 'medium' | 'large' | "square"
+type ButtonSize =  'small' | 'medium' | 'large' | "square"
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: React.ReactNode

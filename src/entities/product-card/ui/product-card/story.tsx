@@ -29,8 +29,8 @@ export const defaultCard = ProductCardTemplate.bind({});
 
 defaultCard.args = {
     img: "https://i.ibb.co/wgshsGM/Image-1.png",
-    price: '2.29',
-    availableCount: '20'
+    price: '$ 2.24',
+    title: "Spicy seasoned seafood noodles",
 }
 
 
