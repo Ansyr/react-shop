@@ -25,10 +25,8 @@ export const ProductCard = (props: ProductCardProps) => {
                         <Typography as={"h6"} color={"primary"} classNames={styles.price}>
                             {`${price}`}
                         </Typography>
-                        <Button size={"small"} color={"secondary"} theme={"line"}>Add</Button>
+                        <Button size={"small"} color={"secondary"} theme={"line"}>add</Button>
                     </div>
-
-
             </div>
         </Card>
     );

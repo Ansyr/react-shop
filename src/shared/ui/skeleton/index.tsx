@@ -14,12 +14,11 @@ interface SkeletonProps{
 }
 
 const Skeleton = (props: SkeletonProps) => {
-    const {height,width,border,classNames,shape = "square",...rest} = props
+    const {height,width,classNames,shape = "square",...rest} = props
 
     const style: CSSProperties = {
         height,
-        width,
-        border
+        width
     }
     const className = clsx(styles.skeleton,styles[shape],classNames)
 

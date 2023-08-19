@@ -5,7 +5,7 @@ import styles from './styles.module.scss'
 
 type TextSize = 'small' | 'medium' | 'large' | 'xl'
 // 12 14 16 28
-type TextColor = 'primary' | 'secondary'
+type TextColor = 'primary' | 'secondary' | "white"
 
 interface TextOwnProps<E extends ElementType> {
     size?: TextSize,
