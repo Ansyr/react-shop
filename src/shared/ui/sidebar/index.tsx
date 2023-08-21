@@ -1,3 +1,4 @@
+import {clsx} from "clsx";
 import React from "react";
 import {Link} from "react-router-dom";
 import styles from "./styles.module.scss"
@@ -13,13 +14,16 @@ interface SidebarItems{
 interface SidebarProps{
     items: SidebarItems[]
     logo: React.ReactNode
+    classNames?:string
 }
 
 
 
-export const Sidebar = ({items,logo} : SidebarProps) => {
+export const Sidebar = (props : SidebarProps) => {
+    const {items,logo,classNames,...rest} = props
+    const className = clsx(styles.sidebar,classNames)
     return (
-        <div className={styles.sidebar}>
+        <div className={className} {...rest}>
             {logo}
             <ul>
                 {items.map((item,id) => <li className={styles.sidebarItem} key={id}>

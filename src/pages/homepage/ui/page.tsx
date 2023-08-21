@@ -1,19 +1,19 @@
-import MainLayout from "@/pages/homepage/ui/main-layout";
-import {Input, Typography} from "@/shared/ui";
+import MainHeader from "@/pages/homepage/ui/main-header";
+import ProductList from "@/pages/homepage/ui/product-list";
+import Button from "@/shared/ui/button";
 import Container from "@/shared/ui/Container";
-import Header from "@/shared/ui/header";
+import Layout from "@/shared/ui/Layout";
 import styles from "./styles.module.scss"
 const HomePage = () => {
 
     return (
-        <div className={styles.homePage}>
-           <MainLayout/>
+        <Layout header={<MainHeader classNames={styles.mainHeader}/>} classNames={styles.mainLayout}>
             <Container>
-                <Header rightSlot={<Input size={"medium"}/>} leftSlot={<Typography as={"h2"} size={"xl"}>Jaegar Resto</Typography>}>
-
-                </Header>
+                <ProductList extraForItems={<Button size={"small"} color={"secondary"} theme={"line"}>
+                    add
+                </Button>}/>
             </Container>
-        </div>
+        </Layout>
     );
 };
 

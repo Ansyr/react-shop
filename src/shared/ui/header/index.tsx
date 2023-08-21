@@ -14,7 +14,7 @@ const Header = (props: HeaderProps) => {
     const {leftSlot,rightSlot,children,classNames,...rest} = props
     const className = clsx(styles.header,classNames)
     return (
-        <div className={className} {...rest}>
+        <header className={className} {...rest}>
             {
                 leftSlot &&
             <div className={styles.leftSlot}>
@@ -28,7 +28,7 @@ const Header = (props: HeaderProps) => {
                 </div>
             }
             {children}
-        </div>
+        </header>
     );
 };
 

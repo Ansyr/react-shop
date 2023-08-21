@@ -10,6 +10,7 @@ interface ModalProps{
 
 const Modal = (props: ModalProps) => {
     const {children,isOpen,...rest} = props
+
     const className = clsx(styles.modal, {[styles.isOpen]: isOpen})
     return (
      <Portal>

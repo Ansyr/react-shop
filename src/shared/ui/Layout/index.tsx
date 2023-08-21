@@ -1,29 +1,53 @@
 import {clsx} from "clsx";
 import {ReactNode} from "react";
+import {Sidebar} from "@/shared/ui";
+import Button from "@/shared/ui/button";
+import {Discount, Home, Store} from "@/shared/ui/ui-svg";
+import styles from "./styles.module.scss"
 
-interface LayoutProps{
+interface LayoutProps {
     header?: ReactNode
-    footer?:ReactNode
+    footer?: ReactNode
     children?: ReactNode
     classNames?: string
 }
+
+const items = [
+    {
+        value: "Home",
+        href: "#home",
+        icon: <Button theme={"clear"} size={"square"}>{<Home/>}</Button>,
+    },
+    {
+        value: "Inbox",
+        href: "#inbox",
+        icon: <Button theme={"clear"} size={"square"}>{<Discount/>}</Button>,
+    },
+    {
+        value: "Home",
+        href: "#home",
+        icon: <Button theme={"clear"} size={"square"}>{<Home/>}</Button>,
+    },
+    {
+        value: "Inbox",
+        href: "#inbox",
+        icon: <Button theme={"clear"} size={"square"}>{<Discount/>}</Button>,
+    }
+]
+
 const Layout = (props: LayoutProps) => {
     const {header,footer,children,classNames,...rest} = props
-    const className = clsx(classNames)
+    const className = clsx(styles.content,classNames)
     return (
-        <div className={className} {...rest}>
-            {header &&
-                <header>
-                    {header}
-                </header>
-            }
-            {children}
-            {
-                footer &&
-                <footer>
-                    {footer}
-                </footer>
-            }
+        <div className={styles.layout} {...rest}>
+            <Sidebar items={items}  logo={<Store/>}/>
+            <div className={className}>
+                {header}
+
+                {children}
+
+                {footer}
+            </div>
         </div>
     );
 };

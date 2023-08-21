@@ -1,4 +1,8 @@
-.container {
+.layout {
   display: flex;
   flex-direction: row;
+}
+
+.content{
+  padding: 0 24px;
 }

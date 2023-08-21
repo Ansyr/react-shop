@@ -1,18 +1,20 @@
 import {clsx} from "clsx";
+import {ReactNode} from "react";
 import {Card, Typography} from "@/shared/ui"
-import Button from "@/shared/ui/button";
 import styles from "./styles.module.scss"
 
 interface ProductCardProps{
     img: string,
     price: string
     title: string,
-    availableCount: string
-    classNames?:string
+    classNames?:string,
+    extraAction?: ReactNode
 }
 
 export const ProductCard = (props: ProductCardProps) => {
-    const {img,title,price,classNames,...rest} = props
+    const {img,title,price,classNames,extraAction,...rest} = props
+
+
     const className = clsx(styles.productCard,classNames)
     return (
         <Card classNames={className} {...rest}>
@@ -25,7 +27,7 @@ export const ProductCard = (props: ProductCardProps) => {
                         <Typography as={"h6"} color={"primary"} classNames={styles.price}>
                             {`${price}`}
                         </Typography>
-                        <Button size={"small"} color={"secondary"} theme={"line"}>add</Button>
+                        {extraAction}
                     </div>
             </div>
         </Card>

@@ -1,5 +1,5 @@
 import type {ComponentMeta, ComponentStory} from '@storybook/react';
-import {Typography} from "@/shared/ui";
+import Button from "@/shared/ui/button";
 import Modal from "@/shared/ui/modal/index.tsx";
 
 
@@ -25,6 +25,6 @@ const ModalTemplate: ComponentStory<typeof Modal> = (args) => <Modal {...args}/>
 export const commonModal = ModalTemplate.bind({});
 
 commonModal.args = {
-    children: <Typography>123123123</Typography>,
+    children: <Button>123</Button>,
     isOpen: true
 }
